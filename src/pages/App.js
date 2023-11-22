@@ -1,9 +1,14 @@
-import ToggleTheme from "../components/ToggleTheme";
+import { Stack } from "@chakra-ui/react";
+import Navbar from "../components/Navbar";
+import CodeEditor from "../components/CodeEditor";
 
 function App() {
     return (
         <>
-            <ToggleTheme />
+            <Navbar />
+            <Stack spacing={0}>
+                <CodeEditor />
+            </Stack>
         </>
     );
 }
