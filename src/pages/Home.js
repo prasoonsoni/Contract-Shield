@@ -29,6 +29,7 @@ export default function Home() {
                     alignItems={"center"}>
                     <Heading
                         fontWeight={600}
+                        color={"#fff"}
                         fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }}
                         lineHeight={'110%'}>
                         Protecting Your Smart Contracts,<br />
@@ -65,7 +66,7 @@ export default function Home() {
                         <Box>
                             <Icon
                                 as={Arrow}
-                                color={useColorModeValue('gray.800', 'gray.300')}
+                                color={"#fff"}
                                 w={71}
                                 position={'absolute'}
                                 right={-71}
@@ -77,6 +78,7 @@ export default function Home() {
                                 position={'absolute'}
                                 right={'-125px'}
                                 top={'-15px'}
+                                color={"#fff"}
                                 transform={'rotate(10deg)'}>
                                 Starting at $0/mo
                             </Text>

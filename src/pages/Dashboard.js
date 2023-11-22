@@ -182,10 +182,10 @@ const Dashboard = () => {
                             alignItems={"center"}
                         // gap={2}
                         >
-                            <Text fontSize={"xl"}>{code.file_name}</Text>
+                            <Text fontSize={"xl"} color={"#fff"}>{code.file_name}</Text>
                             <Spacer />
-                            <Button width={{ base: "100%", md: "fit-content" }} leftIcon={<FiEye />} onClick={() => navigate(`/code/${code._id}`)}>View Code</Button>
-                            {code.analyzed && <Button width={{ base: "100%", md: "fit-content" }} leftIcon={<FiDownload />} onClick={() => {
+                            <Button colorScheme='gray' width={{ base: "100%", md: "fit-content" }} leftIcon={<FiEye />} onClick={() => navigate(`/code/${code._id}`)}>View Code</Button>
+                            {code.analyzed && <Button colorScheme='gray' width={{ base: "100%", md: "fit-content" }} leftIcon={<FiDownload />} onClick={() => {
                                 var docDefinition = {
                                     content: [
                                         { text: 'Code with error', style: 'header' },
@@ -226,7 +226,7 @@ const Dashboard = () => {
                                 pdfMake.vfs = pdfFonts.pdfMake.vfs
                                 pdfMake.createPdf(docDefinition).download(`${code.file_name}.pdf`)
                             }}>Download Report</Button>}
-                            <Button width={{ base: "100%", md: "fit-content" }} leftIcon={<MdDeleteOutline />} onClick={async () => {
+                            <Button colorScheme='gray' width={{ base: "100%", md: "fit-content" }} leftIcon={<MdDeleteOutline />} onClick={async () => {
                                 const response = await fetch(`${BASE_URL}/code/delete/${code._id}`, {
                                     method: "DELETE",
                                     headers: {

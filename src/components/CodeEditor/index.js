@@ -149,7 +149,7 @@ const CodeEditor = () => {
                 <VStack alignItems={"start"}>
                     <Text>Code with vulnerabilities</Text>
                     <CodeMirror
-                        theme={colorMode === "dark" ? githubDark : githubLight}
+                        theme={githubDark}
                         value={code}
                         height="70vh"
                         width={isMobile ? "90vw" : "45vw"}
@@ -168,7 +168,7 @@ const CodeEditor = () => {
                 <VStack alignItems={"start"}>
                     <Text>Code without vulnerabilities</Text>
                     <CodeMirror
-                        theme={colorMode === "dark" ? githubDark : githubLight}
+                        theme={githubDark}
                         value={correctCode}
                         height="70vh"
                         width={isMobile ? "90vw" : "45vw"}
@@ -199,21 +199,21 @@ const CodeEditor = () => {
                 Analyze Code
             </Button>}
             {vulnerabilities && vulnerabilities.length > 0 && <VStack>
-                <Text alignSelf={"start"} fontWeight={"bold"} fontSize={"1.5rem"}>Vulnerabilities</Text>
+                <Text alignSelf={"start"} fontWeight={"bold"} fontSize={"1.5rem"} color={"#fff"}>Vulnerabilities</Text>
                 <VStack alignItems={"start"} spacing={2}>
                     {vulnerabilities.map((vul, index) => (
                         <VStack width={"full"} p={3} borderRadius={"20px"} alignItems={"start"} spacing={2} key={index} bgColor={vul.rating === "high" ? "rgb(255,0,0,0.2)" : vul.rating === "medium" ? "rgb(255,165,0,0.2)" : "rgb(0,255,0,0.2)"}>
-                            <Text fontWeight={"bold"} fontSize={"1.3rem"}>{vul.vulnerability}</Text>
-                            <Text fontWeight={"medium"} fontSize={"1.1rem"}>Why Vulnerability exists?</Text>
-                            <Text fontSize={"1rem"}>{vul.explanation}</Text>
+                            <Text fontWeight={"bold"} fontSize={"1.3rem"} color={"#fff"}>{vul.vulnerability}</Text>
+                            <Text fontWeight={"medium"} fontSize={"1.1rem"} color={"#fff"}>Why Vulnerability exists?</Text>
+                            <Text fontSize={"1rem"} color={"#fff"}>{vul.explanation}</Text>
                             {/* <Text>Rating: {vul.rating}</Text> */}
-                            <Text fontWeight={"medium"} fontSize={"1.1rem"}>What is the solution?</Text>
-                            <Text fontSize={"1rem"}>{vul.solution}</Text>
+                            <Text fontWeight={"medium"} fontSize={"1.1rem"} color={"#fff"}>What is the solution?</Text>
+                            <Text fontSize={"1rem"} color={"#fff"}>{vul.solution}</Text>
                         </VStack>
                     ))}
                 </VStack>
             </VStack>}
-            {isAnalyzed && <Button width={{ base: "100%", md: "fit-content" }} leftIcon={<FiDownload />} onClick={() => {
+            {isAnalyzed && <Button colorScheme='gray' width={{ base: "100%", md: "fit-content" }} leftIcon={<FiDownload />} onClick={() => {
                 var docDefinition = {
                     content: [
                         { text: 'Code with error', style: 'header' },

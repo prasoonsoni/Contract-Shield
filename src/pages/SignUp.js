@@ -91,7 +91,7 @@ export default function SignUp() {
                 h={"90vh"}>
                 <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
                     <Stack align={'center'}>
-                        <Heading fontSize={'4xl'} textAlign={'center'}>
+                        <Heading fontSize={'4xl'} textAlign={'center'} color={"#fff"}>
                             Sign up to your account
                         </Heading>
                         <Text fontSize={'lg'} color={'gray.600'}>
@@ -107,23 +107,23 @@ export default function SignUp() {
                             <HStack>
                                 <Box>
                                     <FormControl id="firstName" isRequired>
-                                        <FormLabel>First Name</FormLabel>
+                                        <FormLabel color={"#fff"}>First Name</FormLabel>
                                         <Input type="text" disabled={loading} value={firstName} onChange={(e) => setFirstName(e.target.value)} focusBorderColor='green.400' />
                                     </FormControl>
                                 </Box>
                                 <Box>
                                     <FormControl id="lastName" isRequired>
-                                        <FormLabel>Last Name</FormLabel>
+                                        <FormLabel color={"#fff"}>Last Name</FormLabel>
                                         <Input type="text" disabled={loading} value={lastName} onChange={(e) => setLastName(e.target.value)} focusBorderColor='green.400' />
                                     </FormControl>
                                 </Box>
                             </HStack>
                             <FormControl id="email" isRequired>
-                                <FormLabel>Email address</FormLabel>
+                                <FormLabel color={"#fff"}>Email address</FormLabel>
                                 <Input type="email" disabled={loading} focusBorderColor='green.400' value={email} onChange={(e) => setEmail(e.target.value)} />
                             </FormControl>
                             <FormControl id="password" isRequired>
-                                <FormLabel>Password</FormLabel>
+                                <FormLabel color={"#fff"}>Password</FormLabel>
                                 <InputGroup>
                                     <Input type={showPassword ? 'text' : 'password'} disabled={loading} focusBorderColor='green.400' value={password} onChange={(e) => setPassword(e.target.value)} />
                                     <InputRightElement h={'full'}>
@@ -147,7 +147,7 @@ export default function SignUp() {
                                     }}>
                                     Sign up
                                 </Button>
-                                <Text align={'center'}>
+                                <Text align={'center'} color={"#fff"}>
                                     Already a user? <Link onClick={() => navigate("/login")} color={'green.400'}>Login</Link>
                                 </Text>
                             </Stack>

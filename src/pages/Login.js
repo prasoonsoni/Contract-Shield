@@ -84,10 +84,10 @@ export default function Login() {
                 bgColor={"#00242c"}
                 h={"90vh"}>
                 <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
-                    <Stack align={'center'}>
-                        <Heading fontSize={'4xl'}>Sign in to your account</Heading>
-                        <Text fontSize={'lg'} color={'gray.600'} display={"flex"}>
-                            to enjoy all of our cool &nbsp; <Text color={'green.400'}> features</Text> ✌️
+                    <Stack textAlign={'center'}>
+                        <Heading fontSize={'4xl'} color={"#fff"}>Sign in to your account</Heading>
+                        <Text fontSize={'lg'} color={'gray.600'}>
+                            to enjoy all of our cool features ✌️
                         </Text>
                     </Stack>
                     <Box
@@ -98,11 +98,11 @@ export default function Login() {
                         p={8}>
                         <Stack spacing={4}>
                             <FormControl id="email">
-                                <FormLabel>Email address</FormLabel>
+                                <FormLabel color={"#fff"}>Email address</FormLabel>
                                 <Input type="email" focusBorderColor='green.400' disabled={loading} value={email} onChange={(e) => setEmail(e.target.value)} />
                             </FormControl>
                             <FormControl id="password">
-                                <FormLabel>Password</FormLabel>
+                                <FormLabel color={"#fff"}>Password</FormLabel>
                                 <Input type="password" focusBorderColor='green.400' disabled={loading} value={password} onChange={(e) => setPassword(e.target.value)} />
                             </FormControl>
                             <Stack spacing={3}>
@@ -117,7 +117,7 @@ export default function Login() {
                                     }}>
                                     Sign in
                                 </Button>
-                                <Text align={'center'}>
+                                <Text align={'center'} color={"#fff"}>
                                     Not a user? <Link onClick={() => navigate("/signup")} color={'green.400'}>Sign up</Link>
                                 </Text>
                             </Stack>
