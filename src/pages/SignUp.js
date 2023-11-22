@@ -108,24 +108,24 @@ export default function SignUp() {
                                 <Box>
                                     <FormControl id="firstName" isRequired>
                                         <FormLabel color={"#fff"}>First Name</FormLabel>
-                                        <Input type="text" disabled={loading} value={firstName} onChange={(e) => setFirstName(e.target.value)} focusBorderColor='green.400' />
+                                        <Input color={"#fff"} type="text" disabled={loading} value={firstName} onChange={(e) => setFirstName(e.target.value)} focusBorderColor='green.400' />
                                     </FormControl>
                                 </Box>
                                 <Box>
                                     <FormControl id="lastName" isRequired>
                                         <FormLabel color={"#fff"}>Last Name</FormLabel>
-                                        <Input type="text" disabled={loading} value={lastName} onChange={(e) => setLastName(e.target.value)} focusBorderColor='green.400' />
+                                        <Input color={"#fff"} type="text" disabled={loading} value={lastName} onChange={(e) => setLastName(e.target.value)} focusBorderColor='green.400' />
                                     </FormControl>
                                 </Box>
                             </HStack>
                             <FormControl id="email" isRequired>
                                 <FormLabel color={"#fff"}>Email address</FormLabel>
-                                <Input type="email" disabled={loading} focusBorderColor='green.400' value={email} onChange={(e) => setEmail(e.target.value)} />
+                                <Input color={"#fff"} type="email" disabled={loading} focusBorderColor='green.400' value={email} onChange={(e) => setEmail(e.target.value)} />
                             </FormControl>
                             <FormControl id="password" isRequired>
                                 <FormLabel color={"#fff"}>Password</FormLabel>
                                 <InputGroup>
-                                    <Input type={showPassword ? 'text' : 'password'} disabled={loading} focusBorderColor='green.400' value={password} onChange={(e) => setPassword(e.target.value)} />
+                                    <Input color={"#fff"} type={showPassword ? 'text' : 'password'} disabled={loading} focusBorderColor='green.400' value={password} onChange={(e) => setPassword(e.target.value)} />
                                     <InputRightElement h={'full'}>
                                         <Button
                                             variant={'ghost'}

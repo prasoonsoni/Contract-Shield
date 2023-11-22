@@ -99,11 +99,11 @@ export default function Login() {
                         <Stack spacing={4}>
                             <FormControl id="email">
                                 <FormLabel color={"#fff"}>Email address</FormLabel>
-                                <Input type="email" focusBorderColor='green.400' disabled={loading} value={email} onChange={(e) => setEmail(e.target.value)} />
+                                <Input color={"#fff"} type="email" focusBorderColor='green.400' disabled={loading} value={email} onChange={(e) => setEmail(e.target.value)} />
                             </FormControl>
                             <FormControl id="password">
                                 <FormLabel color={"#fff"}>Password</FormLabel>
-                                <Input type="password" focusBorderColor='green.400' disabled={loading} value={password} onChange={(e) => setPassword(e.target.value)} />
+                                <Input color={"#fff"} type="password" focusBorderColor='green.400' disabled={loading} value={password} onChange={(e) => setPassword(e.target.value)} />
                             </FormControl>
                             <Stack spacing={3}>
                                 <Button

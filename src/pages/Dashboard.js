@@ -126,12 +126,12 @@ const Dashboard = () => {
             >
                 <ModalOverlay />
                 <ModalContent bgColor={"#00242c"}>
-                    <ModalHeader>Create your account</ModalHeader>
+                    <ModalHeader color={"#fff"}>Create your account</ModalHeader>
                     <ModalCloseButton />
                     <ModalBody pb={6}>
                         <FormControl id="password">
-                            <FormLabel>File Name</FormLabel>
-                            <Input focusBorderColor='green.400' disabled={loading} value={fileName} onChange={(e) => setFileName(e.target.value)} />
+                            <FormLabel color={"#fff"}>File Name</FormLabel>
+                            <Input color={"#fff"} focusBorderColor='green.400' disabled={loading} value={fileName} onChange={(e) => setFileName(e.target.value)} />
                         </FormControl>
                     </ModalBody>
 
