@@ -161,9 +161,9 @@ const Dashboard = () => {
                     // loadingText="Logging in..."
                     // isLoading={loading}
                     leftIcon={<FiPlusCircle />}
-                    width={"fit-content"}
+                    width={{ base: "100%", md: "fit-content" }}
                     onClick={onOpen}
-                    bg={'green.400'}
+                    bg={'green.400'} 
                     color={'white'}
                     _hover={{
                         bg: 'green.500',
@@ -257,6 +257,17 @@ const Dashboard = () => {
                     ))}
                 </Stack>
                 }
+                {codes.length === 0 && <Stack
+
+                    p={3}
+                    bgColor={"rgb(39, 103, 73, 0.2)"}
+                    borderRadius={"10px"}
+                    direction={{ base: "column", md: "row" }}
+                    justifyContent={"center"}
+                    alignItems={"center"}
+                // gap={2}
+                >
+                    <Text fontSize={"xl"}>No codes available</Text></Stack>}
             </Stack >
 
         </>
